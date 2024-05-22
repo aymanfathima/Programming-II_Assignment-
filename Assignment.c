@@ -1,4 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
+#define MAX 100
+
+// Define Stack structure
+typedef struct {
+    int top;
+    double items[MAX];
+} Stack;
+
+// Function prototypes
+void push(Stack *s, double value);
+double pop(Stack *s);
+double calculate(char operator, double operand1, double operand2);
 
 
 
