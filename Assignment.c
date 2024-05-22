@@ -61,3 +61,23 @@ int main() {
     return 0;
 }
 
+// Perform operation based on operator
+double calculate(char operator, double operand1, double operand2) {
+    switch (operator) {
+        case '+':
+            return operand1 + operand2;
+        case '-':
+            return operand1 - operand2;
+        case '*':
+            return operand1 * operand2;
+        case '/':
+            if (operand2 == 0) {
+                printf("Error: Division by zero\n");
+                exit(1);
+            }
+            return operand1 / operand2;
+        default:
+            printf("Invalid operator\n");
+            exit(1);
+    }
+}
